@@ -7,15 +7,7 @@
 //
 
 #import "ListMenu.h"
-
-NSString * const kInbox    = @"Inbox";
-NSString * const kToday    = @"Today";
-NSString * const kNext     = @"Next";
-NSString * const kPlanned  = @"Planned";
-NSString * const kSometime = @"Sometime";
-NSString * const kProjects = @"Projects";
-NSString * const kLog      = @"Log";
-
+#import "Constants.h"
 
 @implementation ListMenuItem
 @synthesize title, icon, sectionName;

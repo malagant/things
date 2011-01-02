@@ -100,8 +100,43 @@
     }
     
     NSLog(@"sections : %d, section : %d, row : %d",  [mainMenu.sections count], indexPath.section, indexPath.row);
-        
-    ListMenuItem *item = [[[[mainMenu.sections allValues] objectAtIndex:indexPath.section] allValues] objectAtIndex:indexPath.row];
+    
+    NSDictionary *section = nil;
+    
+    switch(indexPath.section) {
+        case 0:
+            section = mainMenu.sectionOne;
+            break;
+        case 1:
+            section = mainMenu.sectionTwo;
+            break;
+        case 2:
+            section = mainMenu.sectionThree;
+            break;
+        case 3:
+            section = mainMenu.sectionFour;
+            break;
+    }
+    
+    ListMenuItem *item = nil;
+    if(indexPath.section == 1) {
+        switch(indexPath.row) {
+            case 0:
+                item = [section objectForKey:@"Today"];
+                break;
+            case 1:
+                item = [section objectForKey:@"Next"];
+                break;
+            case 2:
+                item = [section objectForKey:@"Planned"];
+                break;
+            case 3:
+                item = [section objectForKey:@"Sometime"];
+                break;
+        }
+    } else {
+        item = [[section allValues] objectAtIndex:indexPath.row];
+    }
     cell.textLabel.text = item.title;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;

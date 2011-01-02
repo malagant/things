@@ -28,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF6F5C9912D10D5F00DEDB3F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		CF83EF0A12CF8CA4006069C7 /* things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = things.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83EF0D12CF8CA4006069C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CF83EF0F12CF8CA4006069C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +108,7 @@
 				CF83EF1D12CF8CA4006069C7 /* thingsAppDelegate.m */,
 				CF83EF2412CF8CA4006069C7 /* RootViewController.h */,
 				CF83EF2512CF8CA4006069C7 /* RootViewController.m */,
+				CF6F5C9912D10D5F00DEDB3F /* Constants.h */,
 				CF83EF4812CF8E3B006069C7 /* ListMenu.h */,
 				CF83EF4912CF8E3B006069C7 /* ListMenu.m */,
 			);
