@@ -31,37 +31,44 @@
     self = [super init];
     sectionOne = [[NSMutableDictionary alloc] initWithCapacity:1];
     
-    ListMenuItem *inbox = [[ListMenuItem alloc] initWithTitle:@"Eingang" icon:nil sectionName:kInbox];
+    UIImage *imgInbox = [UIImage imageNamed:@"things-touch-source-inbox.png"];
+    ListMenuItem *inbox = [[ListMenuItem alloc] initWithTitle:@"Eingang" icon:imgInbox sectionName:kInbox];
     [[self sectionOne] setObject:inbox forKey:kInbox];
     [inbox release];
     
     sectionTwo = [[NSMutableDictionary alloc] initWithCapacity:4];
 
-    ListMenuItem *sometime = [[ListMenuItem alloc] initWithTitle:@"Irgendwann" icon:nil sectionName:kSometime];
+    UIImage *imgSometime = [UIImage imageNamed:@"things-touch-source-someday.png"];
+    ListMenuItem *sometime = [[ListMenuItem alloc] initWithTitle:@"Irgendwann" icon:imgSometime sectionName:kSometime];
     [[self sectionTwo] setObject:sometime forKey:kSometime];
     [sometime release];
     
-    ListMenuItem *planned = [[ListMenuItem alloc] initWithTitle:@"Geplant" icon:nil sectionName:kPlanned];
+    UIImage *imgPlanned = [UIImage imageNamed:@"things-touch-source-scheduled.png"];
+    ListMenuItem *planned = [[ListMenuItem alloc] initWithTitle:@"Geplant" icon:imgPlanned sectionName:kPlanned];
     [[self sectionTwo] setObject:planned forKey:kPlanned];
     [planned release];
     
-    ListMenuItem *next = [[ListMenuItem alloc] initWithTitle:@"Als Nächstes" icon:nil sectionName:kNext];
+    UIImage *imgNext = [UIImage imageNamed:@"things-touch-source-next.png"];
+    ListMenuItem *next = [[ListMenuItem alloc] initWithTitle:@"Als Nächstes" icon:imgNext sectionName:kNext];
     [[self sectionTwo] setObject:next forKey:kNext];
     [next release];
         
-    ListMenuItem *today = [[ListMenuItem alloc] initWithTitle:@"Heute" icon:nil sectionName:kToday];
+    UIImage *imgToday = [UIImage imageNamed:@"things-touch-source-today.png"];
+    ListMenuItem *today = [[ListMenuItem alloc] initWithTitle:@"Heute" icon:imgToday sectionName:kToday];
     [[self sectionTwo] setObject:today forKey:kToday];
     [today release];
     
     sectionThree = [[NSMutableDictionary alloc] initWithCapacity:1];
     
-    ListMenuItem *projects = [[ListMenuItem alloc] initWithTitle:@"Projekte" icon:nil sectionName:kProjects];
+    UIImage *imgProjects = [UIImage imageNamed:@"things-touch-source-projects.png"];
+    ListMenuItem *projects = [[ListMenuItem alloc] initWithTitle:@"Projekte" icon:imgProjects sectionName:kProjects];
     [[self sectionThree] setObject:projects forKey:kProjects];
     [projects release];
     
     sectionFour = [[NSMutableDictionary alloc] initWithCapacity:1];
     
-    ListMenuItem *logbook = [[ListMenuItem alloc] initWithTitle:@"Logbuch" icon:nil sectionName:kLog];
+    UIImage *imgLogbook = [UIImage imageNamed:@"things-touch-source-logbook.png"];
+    ListMenuItem *logbook = [[ListMenuItem alloc] initWithTitle:@"Logbuch" icon:imgLogbook sectionName:kLog];
     [[self sectionFour] setObject:logbook forKey:kLog];
     [logbook release];
 

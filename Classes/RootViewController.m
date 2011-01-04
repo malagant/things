@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "TaskEditorViewController.h"
 
 @implementation RootViewController
 
@@ -20,6 +21,8 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
+        
+    [tableView setContentOffset:CGPointMake(0.0, searchBar.frame.size.height) animated:NO];
 }
 
 
@@ -89,11 +92,11 @@
 
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)_tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         cell.isAccessibilityElement = YES;
@@ -139,6 +142,7 @@
     }
     cell.textLabel.text = item.title;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.imageView.image = item.icon;
     return cell;
 }
 
@@ -180,11 +184,16 @@
 
 - (void)dealloc {
     [mainMenu release];
+    [tableView release];
+    [searchBar release];
+    [scrollView release];
     [super dealloc];
 }
 
 - (void)insertNewObject {
-    
+    TaskEditorViewController *taskEditorViewController = [[TaskEditorViewController alloc] initWithNibName:@"TaskEditorViewController" bundle:nil];
+    [self.navigationController pushViewController:taskEditorViewController animated:YES];
+    [taskEditorViewController release];
 }
 
 @end

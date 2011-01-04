@@ -12,8 +12,11 @@
 
 #import "ListMenu.h"
 
-@interface RootViewController : UITableViewController {
+@interface RootViewController : UIViewController <UITableViewDelegate> {
     ListMenu *mainMenu;
+    IBOutlet UIScrollView *scrollView;
+    IBOutlet UISearchBar *searchBar;
+    IBOutlet UITableView *tableView;
 }
 
 

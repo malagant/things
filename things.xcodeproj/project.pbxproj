@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF31E72512D26A7B00FD4986 /* things-touch-source-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E71E12D26A7B00FD4986 /* things-touch-source-inbox.png */; };
+		CF31E72612D26A7B00FD4986 /* things-touch-source-logbook.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E71F12D26A7B00FD4986 /* things-touch-source-logbook.png */; };
+		CF31E72712D26A7B00FD4986 /* things-touch-source-next.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E72012D26A7B00FD4986 /* things-touch-source-next.png */; };
+		CF31E72812D26A7B00FD4986 /* things-touch-source-projects.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E72112D26A7B00FD4986 /* things-touch-source-projects.png */; };
+		CF31E72912D26A7B00FD4986 /* things-touch-source-scheduled.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E72212D26A7B00FD4986 /* things-touch-source-scheduled.png */; };
+		CF31E72A12D26A7B00FD4986 /* things-touch-source-someday.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E72312D26A7B00FD4986 /* things-touch-source-someday.png */; };
+		CF31E72B12D26A7B00FD4986 /* things-touch-source-today.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E72412D26A7B00FD4986 /* things-touch-source-today.png */; };
 		CF83EF0E12CF8CA4006069C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF83EF0D12CF8CA4006069C7 /* UIKit.framework */; };
 		CF83EF1012CF8CA4006069C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF83EF0F12CF8CA4006069C7 /* Foundation.framework */; };
 		CF83EF1212CF8CA4006069C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF83EF1112CF8CA4006069C7 /* CoreGraphics.framework */; };
@@ -25,9 +32,18 @@
 		CF83EF3912CF8CA4006069C7 /* thingsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = CF83EF3812CF8CA4006069C7 /* thingsTests.h */; };
 		CF83EF3B12CF8CA4006069C7 /* thingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF83EF3A12CF8CA4006069C7 /* thingsTests.m */; };
 		CF83EF4A12CF8E3B006069C7 /* ListMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CF83EF4912CF8E3B006069C7 /* ListMenu.m */; };
+		CFC3956712D2709B0044CE86 /* TaskEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC3956512D2709B0044CE86 /* TaskEditorViewController.m */; };
+		CFC3956812D2709B0044CE86 /* TaskEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC3956612D2709B0044CE86 /* TaskEditorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF31E71E12D26A7B00FD4986 /* things-touch-source-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-inbox.png"; sourceTree = "<group>"; };
+		CF31E71F12D26A7B00FD4986 /* things-touch-source-logbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-logbook.png"; sourceTree = "<group>"; };
+		CF31E72012D26A7B00FD4986 /* things-touch-source-next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-next.png"; sourceTree = "<group>"; };
+		CF31E72112D26A7B00FD4986 /* things-touch-source-projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-projects.png"; sourceTree = "<group>"; };
+		CF31E72212D26A7B00FD4986 /* things-touch-source-scheduled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-scheduled.png"; sourceTree = "<group>"; };
+		CF31E72312D26A7B00FD4986 /* things-touch-source-someday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-someday.png"; sourceTree = "<group>"; };
+		CF31E72412D26A7B00FD4986 /* things-touch-source-today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-today.png"; sourceTree = "<group>"; };
 		CF6F5C9912D10D5F00DEDB3F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		CF83EF0A12CF8CA4006069C7 /* things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = things.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83EF0D12CF8CA4006069C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -53,6 +69,9 @@
 		CF83EF3A12CF8CA4006069C7 /* thingsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = thingsTests.m; sourceTree = "<group>"; };
 		CF83EF4812CF8E3B006069C7 /* ListMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListMenu.h; sourceTree = "<group>"; };
 		CF83EF4912CF8E3B006069C7 /* ListMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListMenu.m; sourceTree = "<group>"; };
+		CFC3956412D2709B0044CE86 /* TaskEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEditorViewController.h; sourceTree = "<group>"; };
+		CFC3956512D2709B0044CE86 /* TaskEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEditorViewController.m; sourceTree = "<group>"; };
+		CFC3956612D2709B0044CE86 /* TaskEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskEditorViewController.xib; path = Classes/TaskEditorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +123,8 @@
 		CF83EF0212CF8CA4006069C7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CFC3956412D2709B0044CE86 /* TaskEditorViewController.h */,
+				CFC3956512D2709B0044CE86 /* TaskEditorViewController.m */,
 				CF83EF1C12CF8CA4006069C7 /* thingsAppDelegate.h */,
 				CF83EF1D12CF8CA4006069C7 /* thingsAppDelegate.m */,
 				CF83EF2412CF8CA4006069C7 /* RootViewController.h */,
@@ -128,10 +149,18 @@
 		CF83EF0412CF8CA4006069C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CFC3956612D2709B0044CE86 /* TaskEditorViewController.xib */,
 				CF83EF1512CF8CA4006069C7 /* things-Info.plist */,
 				CF83EF1712CF8CA4006069C7 /* InfoPlist.strings */,
 				CF83EF2112CF8CA4006069C7 /* MainWindow.xib */,
 				CF83EF2712CF8CA4006069C7 /* RootViewController.xib */,
+				CF31E71E12D26A7B00FD4986 /* things-touch-source-inbox.png */,
+				CF31E71F12D26A7B00FD4986 /* things-touch-source-logbook.png */,
+				CF31E72012D26A7B00FD4986 /* things-touch-source-next.png */,
+				CF31E72112D26A7B00FD4986 /* things-touch-source-projects.png */,
+				CF31E72212D26A7B00FD4986 /* things-touch-source-scheduled.png */,
+				CF31E72312D26A7B00FD4986 /* things-touch-source-someday.png */,
+				CF31E72412D26A7B00FD4986 /* things-touch-source-today.png */,
 				CF83EF3412CF8CA4006069C7 /* thingsTests-Info.plist */,
 				CF83EF3612CF8CA4006069C7 /* InfoPlist.strings */,
 			);
@@ -239,6 +268,14 @@
 				CF83EF1912CF8CA4006069C7 /* InfoPlist.strings in Resources */,
 				CF83EF2312CF8CA4006069C7 /* MainWindow.xib in Resources */,
 				CF83EF2912CF8CA4006069C7 /* RootViewController.xib in Resources */,
+				CF31E72512D26A7B00FD4986 /* things-touch-source-inbox.png in Resources */,
+				CF31E72612D26A7B00FD4986 /* things-touch-source-logbook.png in Resources */,
+				CF31E72712D26A7B00FD4986 /* things-touch-source-next.png in Resources */,
+				CF31E72812D26A7B00FD4986 /* things-touch-source-projects.png in Resources */,
+				CF31E72912D26A7B00FD4986 /* things-touch-source-scheduled.png in Resources */,
+				CF31E72A12D26A7B00FD4986 /* things-touch-source-someday.png in Resources */,
+				CF31E72B12D26A7B00FD4986 /* things-touch-source-today.png in Resources */,
+				CFC3956812D2709B0044CE86 /* TaskEditorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +316,7 @@
 				CF83EF2012CF8CA4006069C7 /* things.xcdatamodel in Sources */,
 				CF83EF2612CF8CA4006069C7 /* RootViewController.m in Sources */,
 				CF83EF4A12CF8E3B006069C7 /* ListMenu.m in Sources */,
+				CFC3956712D2709B0044CE86 /* TaskEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
