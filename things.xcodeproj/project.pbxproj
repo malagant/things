@@ -14,6 +14,8 @@
 		CF31E72912D26A7B00FD4986 /* things-touch-source-scheduled.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E72212D26A7B00FD4986 /* things-touch-source-scheduled.png */; };
 		CF31E72A12D26A7B00FD4986 /* things-touch-source-someday.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E72312D26A7B00FD4986 /* things-touch-source-someday.png */; };
 		CF31E72B12D26A7B00FD4986 /* things-touch-source-today.png in Resources */ = {isa = PBXBuildFile; fileRef = CF31E72412D26A7B00FD4986 /* things-touch-source-today.png */; };
+		CF488D3212D3CA6900D571EF /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = CF488D3012D3CA6900D571EF /* checked.png */; };
+		CF488D3312D3CA6900D571EF /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = CF488D3112D3CA6900D571EF /* unchecked.png */; };
 		CF83EF0E12CF8CA4006069C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF83EF0D12CF8CA4006069C7 /* UIKit.framework */; };
 		CF83EF1012CF8CA4006069C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF83EF0F12CF8CA4006069C7 /* Foundation.framework */; };
 		CF83EF1212CF8CA4006069C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF83EF1112CF8CA4006069C7 /* CoreGraphics.framework */; };
@@ -44,6 +46,8 @@
 		CF31E72212D26A7B00FD4986 /* things-touch-source-scheduled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-scheduled.png"; sourceTree = "<group>"; };
 		CF31E72312D26A7B00FD4986 /* things-touch-source-someday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-someday.png"; sourceTree = "<group>"; };
 		CF31E72412D26A7B00FD4986 /* things-touch-source-today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "things-touch-source-today.png"; sourceTree = "<group>"; };
+		CF488D3012D3CA6900D571EF /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		CF488D3112D3CA6900D571EF /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		CF6F5C9912D10D5F00DEDB3F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		CF83EF0A12CF8CA4006069C7 /* things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = things.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83EF0D12CF8CA4006069C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -149,6 +153,8 @@
 		CF83EF0412CF8CA4006069C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CF488D3012D3CA6900D571EF /* checked.png */,
+				CF488D3112D3CA6900D571EF /* unchecked.png */,
 				CFC3956612D2709B0044CE86 /* TaskEditorViewController.xib */,
 				CF83EF1512CF8CA4006069C7 /* things-Info.plist */,
 				CF83EF1712CF8CA4006069C7 /* InfoPlist.strings */,
@@ -276,6 +282,8 @@
 				CF31E72A12D26A7B00FD4986 /* things-touch-source-someday.png in Resources */,
 				CF31E72B12D26A7B00FD4986 /* things-touch-source-today.png in Resources */,
 				CFC3956812D2709B0044CE86 /* TaskEditorViewController.xib in Resources */,
+				CF488D3212D3CA6900D571EF /* checked.png in Resources */,
+				CF488D3312D3CA6900D571EF /* unchecked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

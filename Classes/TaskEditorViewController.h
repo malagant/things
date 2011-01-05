@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface TaskEditorViewController : UIViewController {
-    
-    IBOutlet UITableView *taskTableView;
+@interface TaskEditorViewController : UITableViewController {
+    UIButton *checkBox;
+    UITextField *textEntry; 
 }
 
+@property (nonatomic, retain, readonly) UIButton *checkBox;
+@property (nonatomic, retain, readonly) UITextField *textEntry;
+
+- (IBAction)changeSelected:(id)sender;
 @end
