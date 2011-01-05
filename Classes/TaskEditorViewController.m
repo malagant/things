@@ -7,11 +7,11 @@
 //
 
 #import "TaskEditorViewController.h"
-
+#import "UICheckBoxTextEditTableViewCell.h"
+#import "TargetFoldersViewController.h"
 
 @implementation TaskEditorViewController
-
-@synthesize textEntry, checkBox;
+@synthesize detailsActive;
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -25,9 +25,8 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {   
-    checkBox = [UIButton buttonWithType:UIButtonTypeCustom];
-    [checkBox setBackgroundImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
-    [checkBox setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateSelected];
+    detailsActive = NO;
+    cbTaskField = [[UICheckBoxTextEditTableViewCell alloc] init];
     [super viewDidLoad];
 }
 
@@ -40,16 +39,41 @@
 }
 */
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch(section) {
             case 0:
-            return 1;
-            case 1:
             return 2;
-            case 3:
+            case 1:
             return 1;
     }
     return 0;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == 0) {
+        if(indexPath.row == 0) {
+            // TODO Something with the title editor???
+        } else {
+            [self showDetailsCells];
+        }
+    } else {
+        [self showTargetFolders];
+    }
+}
+
+-(void)showDetailsCells {
+    self.detailsActive = YES;
+    [self.tableView reloadData];
+}
+
+-(void)showTargetFolders {
+    TargetFoldersViewController *con = [[TargetFoldersViewController alloc] initWithNibName:@"TargetFoldersViewController" bundle:nil];
+    [self.navigationController pushViewController:con animated:YES];
+    [con release];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)_tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,31 +83,46 @@
     
     UITableViewCell *cell = nil;
     
-    if(indexPath.section == 1) {
-        cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifierDetails];
-    }
-    if(indexPath.section == 2) {
-        cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifierTargetFolder];
+    if(indexPath.section == 0) {
+        if(indexPath.row == 0) {
+            cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifierTaskTitle];
+        } else {
+            cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifierDetails];
+        }
     }
     else {
-        cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifierTaskTitle];
+        cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifierTargetFolder];
     }
     
     if (cell == nil && indexPath.section == 1) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierDetails] autorelease];
-        cell.isAccessibilityElement = YES;
-    } if (cell == nil && indexPath.section == 2) {
+    //
+    // Cell for target folder selection
+    //
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierTargetFolder] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.text = @"Erstellen in";
+        cell.accessibilityLabel = @"Eingang";
         cell.isAccessibilityElement = YES;
-    } else {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierTaskTitle] autorelease];
-        CGRect rect = cell.contentView.frame;
-        rect.origin.x = rect.origin.x + 50;
-        textEntry = [[UITextField alloc] initWithFrame:rect];
-        textEntry.leftView = checkBox;
-        [cell.contentView addSubview:textEntry];
-        cell.isAccessibilityElement = YES;
+    }
+     else 
+     if(cell == nil) {
+         //
+         // Cell for entering the tasks title
+         //
+         if(indexPath.row == 0) {
+             cell = [[[UICheckBoxTextEditTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierTaskTitle] autorelease];
+             [((UICheckBoxTextEditTableViewCell*)cell).textField becomeFirstResponder];
+             cell.isAccessibilityElement = YES;
+         } else {
+        //
+        // Cell for opening the details menu
+        //
+             cell = [[[UICheckBoxTextEditTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierDetails] autorelease];
+             cell.textLabel.textAlignment = UITextAlignmentCenter;
+             cell.textLabel.text = @"Details einblenden";
+             cell.textLabel.textColor = [UIColor darkGrayColor];
+             cell.isAccessibilityElement = YES;
+         }
     }
     
     return cell;
@@ -111,7 +150,7 @@
 }
 
 - (void)dealloc {
-    [textEntry release];
+    [cbTaskField release];
     [super dealloc];
 }
 

@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UICheckBoxTextEditTableViewCell.h"
 
 @interface TaskEditorViewController : UITableViewController {
-    UIButton *checkBox;
-    UITextField *textEntry; 
+    UICheckBoxTextEditTableViewCell *cbTaskField;
+    BOOL detailsActive;
 }
 
-@property (nonatomic, retain, readonly) UIButton *checkBox;
-@property (nonatomic, retain, readonly) UITextField *textEntry;
+-(void)showTargetFolders;
+-(void)showDetailsCells;
 
-- (IBAction)changeSelected:(id)sender;
+@property (nonatomic, assign) BOOL detailsActive;
+
 @end

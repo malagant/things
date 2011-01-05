@@ -34,6 +34,9 @@
 		CF83EF3912CF8CA4006069C7 /* thingsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = CF83EF3812CF8CA4006069C7 /* thingsTests.h */; };
 		CF83EF3B12CF8CA4006069C7 /* thingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF83EF3A12CF8CA4006069C7 /* thingsTests.m */; };
 		CF83EF4A12CF8E3B006069C7 /* ListMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CF83EF4912CF8E3B006069C7 /* ListMenu.m */; };
+		CF95815F12D495A7003EAF6F /* UICheckBoxTextEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95815E12D495A7003EAF6F /* UICheckBoxTextEditTableViewCell.m */; };
+		CFA35E2112D502350076257C /* TargetFoldersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA35E1F12D502350076257C /* TargetFoldersViewController.m */; };
+		CFA35E2212D502350076257C /* TargetFoldersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA35E2012D502350076257C /* TargetFoldersViewController.xib */; };
 		CFC3956712D2709B0044CE86 /* TaskEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC3956512D2709B0044CE86 /* TaskEditorViewController.m */; };
 		CFC3956812D2709B0044CE86 /* TaskEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC3956612D2709B0044CE86 /* TaskEditorViewController.xib */; };
 /* End PBXBuildFile section */
@@ -73,6 +76,11 @@
 		CF83EF3A12CF8CA4006069C7 /* thingsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = thingsTests.m; sourceTree = "<group>"; };
 		CF83EF4812CF8E3B006069C7 /* ListMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListMenu.h; sourceTree = "<group>"; };
 		CF83EF4912CF8E3B006069C7 /* ListMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListMenu.m; sourceTree = "<group>"; };
+		CF95815D12D495A7003EAF6F /* UICheckBoxTextEditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICheckBoxTextEditTableViewCell.h; sourceTree = "<group>"; };
+		CF95815E12D495A7003EAF6F /* UICheckBoxTextEditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICheckBoxTextEditTableViewCell.m; sourceTree = "<group>"; };
+		CFA35E1E12D502350076257C /* TargetFoldersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetFoldersViewController.h; sourceTree = "<group>"; };
+		CFA35E1F12D502350076257C /* TargetFoldersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetFoldersViewController.m; sourceTree = "<group>"; };
+		CFA35E2012D502350076257C /* TargetFoldersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TargetFoldersViewController.xib; path = Classes/TargetFoldersViewController.xib; sourceTree = "<group>"; };
 		CFC3956412D2709B0044CE86 /* TaskEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEditorViewController.h; sourceTree = "<group>"; };
 		CFC3956512D2709B0044CE86 /* TaskEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEditorViewController.m; sourceTree = "<group>"; };
 		CFC3956612D2709B0044CE86 /* TaskEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskEditorViewController.xib; path = Classes/TaskEditorViewController.xib; sourceTree = "<group>"; };
@@ -127,12 +135,10 @@
 		CF83EF0212CF8CA4006069C7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CFC3956412D2709B0044CE86 /* TaskEditorViewController.h */,
-				CFC3956512D2709B0044CE86 /* TaskEditorViewController.m */,
+				CFA35E2312D502920076257C /* ViewControllers */,
+				CF95816012D495C1003EAF6F /* UIControls */,
 				CF83EF1C12CF8CA4006069C7 /* thingsAppDelegate.h */,
 				CF83EF1D12CF8CA4006069C7 /* thingsAppDelegate.m */,
-				CF83EF2412CF8CA4006069C7 /* RootViewController.h */,
-				CF83EF2512CF8CA4006069C7 /* RootViewController.m */,
 				CF6F5C9912D10D5F00DEDB3F /* Constants.h */,
 				CF83EF4812CF8E3B006069C7 /* ListMenu.h */,
 				CF83EF4912CF8E3B006069C7 /* ListMenu.m */,
@@ -153,6 +159,7 @@
 		CF83EF0412CF8CA4006069C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CFA35E2012D502350076257C /* TargetFoldersViewController.xib */,
 				CF488D3012D3CA6900D571EF /* checked.png */,
 				CF488D3112D3CA6900D571EF /* unchecked.png */,
 				CFC3956612D2709B0044CE86 /* TaskEditorViewController.xib */,
@@ -200,6 +207,28 @@
 				CF83EF3A12CF8CA4006069C7 /* thingsTests.m */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		CF95816012D495C1003EAF6F /* UIControls */ = {
+			isa = PBXGroup;
+			children = (
+				CF95815D12D495A7003EAF6F /* UICheckBoxTextEditTableViewCell.h */,
+				CF95815E12D495A7003EAF6F /* UICheckBoxTextEditTableViewCell.m */,
+			);
+			name = UIControls;
+			sourceTree = "<group>";
+		};
+		CFA35E2312D502920076257C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF83EF2412CF8CA4006069C7 /* RootViewController.h */,
+				CF83EF2512CF8CA4006069C7 /* RootViewController.m */,
+				CFC3956412D2709B0044CE86 /* TaskEditorViewController.h */,
+				CFC3956512D2709B0044CE86 /* TaskEditorViewController.m */,
+				CFA35E1E12D502350076257C /* TargetFoldersViewController.h */,
+				CFA35E1F12D502350076257C /* TargetFoldersViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +313,7 @@
 				CFC3956812D2709B0044CE86 /* TaskEditorViewController.xib in Resources */,
 				CF488D3212D3CA6900D571EF /* checked.png in Resources */,
 				CF488D3312D3CA6900D571EF /* unchecked.png in Resources */,
+				CFA35E2212D502350076257C /* TargetFoldersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +355,8 @@
 				CF83EF2612CF8CA4006069C7 /* RootViewController.m in Sources */,
 				CF83EF4A12CF8E3B006069C7 /* ListMenu.m in Sources */,
 				CFC3956712D2709B0044CE86 /* TaskEditorViewController.m in Sources */,
+				CF95815F12D495A7003EAF6F /* UICheckBoxTextEditTableViewCell.m in Sources */,
+				CFA35E2112D502350076257C /* TargetFoldersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
